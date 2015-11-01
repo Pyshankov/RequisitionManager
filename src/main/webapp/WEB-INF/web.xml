@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+    <display-name>ServletCookie</display-name>
+    <welcome-file-list>
+        <welcome-file>add.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>mainServlet</servlet-name>
+        <servlet-class>Controller.MainServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>mainServlet</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addServlet</servlet-name>
+        <servlet-class>Controller.AddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addServlet</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteServlet</servlet-name>
+        <servlet-class>Controller.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>updateServlet</servlet-name>
+        <servlet-class>Controller.UpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateServlet</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>updateValueServlet</servlet-name>
+        <servlet-class>Controller.UpdateValueServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateValueServlet</servlet-name>
+        <url-pattern>/updateValue</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>getPDFServlet</servlet-name>
+        <servlet-class>Controller.PdfServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getPDFServlet</servlet-name>
+        <url-pattern>/getPDF</url-pattern>
+    </servlet-mapping>
+
+
+
+    <context-param>
+        <param-name>addErrorMes</param-name>
+        <param-value>Не возможно добавить запись,возможно данные были введены не правильно!</param-value>
+    </context-param>
+    <context-param>
+        <param-name>addSuccessMes</param-name>
+        <param-value>Запись создана успешно.</param-value>
+    </context-param>
+
+
+</web-app>
